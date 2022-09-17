@@ -12,6 +12,7 @@ body {
   align-items: stretch;
   justify-content: space-evenly;
   overflow: auto;
+  overflow-x: hidden;
   position: relative; 
 }
 
