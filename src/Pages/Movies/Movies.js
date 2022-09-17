@@ -5,6 +5,7 @@ import SingleContent from '../../components/SingleContent/SingleContent';
 import Genres from '../../components/Genres/Genres';
 import useGenre from "../../hooks/useGenre";
 import './movies.css'
+import { Link } from 'react-router-dom';
 
 const Movies = () => {
 
@@ -44,6 +45,7 @@ const Movies = () => {
 
         <div className="trending">
         {content && content.map((c) => (
+          // <Link to={`/movie/${c.id}`}>
           <SingleContent 
           key={c.id} 
           id={c.id} 
@@ -53,6 +55,7 @@ const Movies = () => {
           media_type='movie'
           vote_average={c.vote_average}
            />
+          //  </Link>
         ))}
       </div>
       {numOfPages > 1 && (
